@@ -1,0 +1,52 @@
+.number {
+    position: relative;
+    height: 0;
+    width: 0;
+    padding-left: 2px;
+}
+
+.letter {
+    position: absolute;
+    padding-bottom: 100%;
+    padding-right: 100%;
+}
+
+.white {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
+}
+
+.black {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: saddlebrown;
+    color: white;
+}
+
+TABLE {
+    border-collapse: collapse;
+    position: relative;
+}
+
+TD, TH {
+    position: relative;
+    padding: 0;
+    border-bottom: 0;
+    border-top: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}

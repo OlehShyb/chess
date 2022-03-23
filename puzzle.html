@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Шахматна дошка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .box{
+        background-color: beige;
+        width: 80px;
+        height: 80px;
+        border: 1px solid black;
+        display: inline-block;
+        margin: -2px;
+        font-size: 70px;
+        text-align: center;
+    }
+    .black{
+        background-color: darkolivegreen;
+    }
+    .number {
+        font-size: 25px;
+        position: relative;
+        height: 0;
+        width: 0;
+        padding-left: 2px;
+    }
+    .letter {
+        font-size: 25px;
+        position: relative;
+        bottom: -50px;
+        left: 30px;
+    }
+    a{
+         color: black;
+         text-decoration: none;
+     }
+</style>
+<body>
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+<br>
+<h1 style="color: darkgoldenrod">This puzzle is taken from the site <a style="color: dodgerblue" href="https://www.chess.com/puzzles/problem/56567">chess.com</a></h1>
+
+<!--<script src="script.js"></script>-->
+<table>
+    <tr>
+        <td>
+            <div class="box" style="ma: 2px">
+                <div class="number" style="color: darkolivegreen">1</div>
+            </div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black">
+                <div>&#9818;</div>
+            </div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box">
+                <div>&#9820;</div>
+            </div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="box black">
+                <div class="number" style="color: beige">2</div>
+                &#9823;
+            </div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black">&#9822;</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box">&#9823;</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="box">
+                <div class="number" style="color: darkolivegreen">3</div>
+            </div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black">&#9816;</div>
+        </td>
+        <td>
+            <div class="box">&#9815;</div>
+        </td>
+        <td>
+            <div class="box black">&#9813;</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+    </tr>
+    <tr>
+
+        <td>
+            <div class="box black">
+                <div class="number" style="color: beige">4</div>
+            </div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black">&#9823;</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="box">
+                <div class="number" style="color: darkolivegreen">5</div>
+            </div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box">&#9817;</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="box black">
+                <div class="number" style="color: beige">6</div>
+                &#9817;
+            </div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="box">
+                <div class="number" style="color: darkolivegreen">7</div>
+            </div>
+        </td>
+        <td>
+            <div class="box black">&#9817;</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black">&#9812;</div>
+        </td>
+        <td>
+            <div class="box" style="color: beige">=</div>
+        </td>
+        <td>
+            <div class="box black">&#9817;</div>
+        </td>
+        <td>
+            <div class="box">&#9819;</div>
+        </td>
+        <td>
+            <div class="box black" style="color: darkolivegreen">=</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="box black">
+                <div class="number" style="color: beige">8</div>
+                <div class="letter" style="color: beige">a</div>
+            </div>
+        </td>
+        <td>
+            <div class="box">
+                <div class="letter" style="color: darkolivegreen">b</div>
+            </div>
+        </td>
+        <td>
+            <div class="box black">
+                <div class="letter" style="color: beige">c</div>
+            </div>
+        </td>
+        <td>
+            <div class="box">
+                <div class="letter" style="color: darkolivegreen">d</div>
+            </div>
+        </td>
+        <td>
+            <div class="box black">
+                <div class="letter" style="color: beige">e</div>
+            </div>
+        </td>
+        <td>
+            <div class="box">
+                <div class="letter" style="color: darkolivegreen">f</div>
+            </div>
+        </td>
+        <td>
+            <div class="box black">
+                <div class="letter" style="color: beige">g</div>
+            </div>
+        </td>
+        <td>
+            <div class="box">
+                <div class="letter" style="color: darkolivegreen">h</div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!--<img src="сhess_symbols_set_.png">-->
+<button style="background-color: darksalmon;margin: 10px" type="button" class="btn btn-dark">
+    <a href="chess.html" class="btn btn-primary" role="button" style="font-size: x-large">Go home</a>
+</button>
+
+
+
+</body>
+</html>
