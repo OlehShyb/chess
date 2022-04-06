@@ -8,9 +8,13 @@
 <body>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+  .fullInfo{
+    font-style: normal;
+  }
+</style>
 
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; width: 1440px">
   <div class="container-fluid">
     <a class="navbar-brand" href="#" style="font-size: xx-large;font-family: Impact">Chess</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,55 +37,123 @@
 </nav>
 <br>
 <h3 style="margin: 20px;color: darkslateblue;font-family: 'Comic Sans MS'">Gamer Data</h3>
-
+<h3 style="margin: 20px;color: darkslateblue;font-family: 'Comic Sans MS'">Gamer Data</h3>
+<hr>
 <!--<div class="input-group">-->
 
-<form style="padding: 20px" class="row g-3 needs-validation" novalidate>
+<form style="padding: 20px; margin-top: -30px" class="row g-3">
   <div class="col-md-4">
-    <label style="font-style: italic" for="first_name_field" class="form-label">First name</label>
-    <input type="text" class="form-control" id="first_name_field" name="first_name_field" required placeholder="For example: Alex">
+    <label style="font-style: italic; font-size: larger" for="first_name_field" class="form-label">First name</label>
+    <input type="text" class="form-control" id="first_name_field" name="first_name_field" required placeholder="For example: Alex" minlength="2" pattern="[a-zA-Z]+">
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label style="font-style: italic" for="last_name_field" class="form-label">Last name</label>
-    <input type="text" class="form-control" id="last_name_field" name="last_name_field" required placeholder="For example: Smith">
+    <label style="font-style: italic; font-size: larger" for="last_name_field" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="last_name_field" name="last_name_field" required placeholder="For example: Smith" minlength="2" pattern="[a-zA-Z]+">
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-4">
-    <label style="font-style: italic" for="instagram_field" class="form-label">Instagram</label>
+    <label style="font-style: italic; font-size: larger" for="instagram_field" class="form-label">Instagram</label>
     <div class="input-group has-validation">
-      <span class="input-group-text" id="inputGroupPrepend">@</span>
-      <input type="text" class="form-control" id="instagram_field" name="instagram_field" aria-describedby="inputGroupPrepend" required placeholder="yourNickName">
+      <span class="input-group-text" id="1">@</span>
+      <input type="text" class="form-control" id="instagram_field" name="instagram_field" aria-describedby="inputGroupPrepend" required minlength="2" placeholder="yourNickName">
     </div>
   </div>
-  <div class="col-md-6">
-    <label style="font-style: italic" for="email_field" class="form-label">Email</label>
-    <input type="text" class="form-control" id="email_field" name="email_field" required placeholder="test@example.com">
-    <div class="invalid-feedback">
-      Please provide a valid email.
+  <div class="col-md-4" style="margin-left: 90px">
+    <label style="font-style: italic; font-size: larger" for="instagram_field" class="form-label">Email</label>
+    <div class="input-group has-validation">
+      <input type="text" class="form-control" id="email_field" name="email_field" aria-describedby="inputGroupPrepend" required minlength="2" placeholder="For example: smith.a">
+      <span class="input-group-text" id="3" style="margin-left: 0.5px">@</span>
     </div>
   </div>
+  <div style="width: 150px; margin-top: 52px; margin-left: -15.5px">
+    <select class="form-select" id="emailTail_field" required>
+      <option selected disabled value="">Choose...</option>
+      <option>gmail.com</option>
+      <option>ukr.net</option>
+      <option>hotmail.com</option>
+      <option>protonmail.com</option>
+      <option>yahoo.com</option>
+    </select>
   </div>
-  <div  class="col-md-3">
-    <label style="font-style: italic" for="phone_field" class="form-label">Phone</label>
-    <input type="text" class="form-control" id="phone_field" name="phone_field" required placeholder="+380 99 999 99 99">
+  </div>
+  <div class="col-md-3">
+    <label style="font-style: italic; font-size: larger" for="phone_field" class="form-label">Phone</label>
+    <input type="text" class="form-control" id="phone_field" name="phone_field" required minlength="2" placeholder="099 999 99 99" pattern="[0-9]{10}">
     <div class="invalid-feedback">
       Please provide a valid phone.
     </div>
   </div>
-  <div class="col-md-3">
-    <label style="font-style: italic" for="country_field" class="form-label">Country</label>
-    <input type="text" class="form-control" id="country_field" name="country_field" required placeholder="For example: France">
-    <div class="invalid-feedback">
-      Please provide a valid country.
-    </div>
+  <div style="width: 150px">
+    <label style="font-style: italic; font-size: larger" class="form-label">Country</label>
+    <select class="form-select" style="width: 170px" id="country_field" required>
+      <option selected disabled value="">Choose...</option>
+      <option>Germany</option>
+      <option>United Kingdom</option>
+      <option>France</option>
+      <option>Italy</option>
+      <option>Spain</option>
+      <option>Ukraine</option>
+      <option>Poland</option>
+      <option>Romania</option>
+      <option>Netherlands</option>
+      <option>Belgium</option>
+      <option>Czech Republic</option>
+      <option>Greece</option>
+      <option>Portugal</option>
+      <option>Sweden</option>
+      <option>Hungary</option>
+      <option>Belarus</option>
+      <option>Austria</option>
+      <option>Serbia</option>
+      <option>Switzerland</option>
+      <option>Bulgaria</option>
+      <option>Denmark</option>
+      <option>Finland</option>
+      <option>Slovakia</option>
+      <option>Norway</option>
+      <option>Ireland</option>
+      <option>Croatia</option>
+      <option>Moldova</option>
+      <option>Albania</option>
+      <option>Lithuania</option>
+      <option>Latvia</option>
+    </select>
+  </div>
+
+
+  <div class="col-12">
+    <label style="font-style: italic; font-size: 23px" for="male" class="form-label">Gender:</label>
+    <input style="margin-left: 8px" type="radio" name="gender" id="male" value="male"> Male
+    <input type="radio" name="gender" id="female" value="female"> Female
   </div>
   <div class="col-12">
-    <button onclick="editRow()" class="btn btn-success">Create new gamer</button>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+      <label class="form-check-label" for="invalidCheck3">
+        <b>Send data immediately</b>
+      </label>
+      <div id="invalidCheck3Feedback" class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div>
+    <a href="#" class="btn btn-primary active" onclick="fullInfo()" aria-current="page" style="margin-bottom: -15px">Get full gamer info</a>
+  </div>
+
+  <input type="hidden" id="custId" name="custId" value="Author: Oleh Shebunchak">
+
+  <div class="col-12">
+    <button class="btn btn-success">Create new gamer</button>
+  </div>
+  <div class="form-floating">
+    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 170px; width: 30%; " readonly></textarea>
+    <label style="" for="floatingTextarea"><u>Gamer Info</u></label>
   </div>
 </form>
 
@@ -104,7 +176,7 @@
     <td>Oleh</td>
     <td>Shebunchak</td>
     <td>oleg.shebunchak@gmail.com</td>
-    <td>+380957160342</td>
+    <td>0957160342</td>
     <td><a href="https://www.instagram.com/_oleh.shyb_/">@_oleh.shyb_</a></td>
     <td>Ukraine</td>
   </tr>
@@ -113,7 +185,7 @@
     <td>Anya</td>
     <td>Kovalchyshyn</td>
     <td>anya_anka_@gmail.com</td>
-    <td>+380990839690</td>
+    <td>0990839690</td>
     <td><a href="https://www.instagram.com/anya_anka_/">@anya_anka_</a></td>
     <td>Ukraine</td>
   </tr>
@@ -122,7 +194,7 @@
     <td>Vlad</td>
     <td>Devyiatov</td>
     <td>vlad_vlad@ukr.net</td>
-    <td>+380689278537</td>
+    <td>0689278537</td>
     <td><a href="https://www.instagram.com/vlad_devyiatov/">@vlad_devyiatov</a></td>
     <td>Ukraine</td>
   </tr>
@@ -130,10 +202,30 @@
 </table>
 </div>
 
-<div>
-<!--<button onclick="editTableDisplay()">Update table</button>-->
-</div>
+<script>
+  function fullInfo(){
+    var first_name = document.querySelector('#first_name_field').value;
+    var last_name = document.querySelector('#last_name_field').value;
+    var instagram = document.querySelector('#instagram_field').value;
+    var email = document.querySelector('#email_field').value;
+    var emailTail = document.querySelector('#emailTail_field').value;
+    var phone = document.querySelector('#phone_field').value;
+    var country = document.querySelector('#country_field').value;
+    var gender = document.querySelector('#male');
+    // var male = document.querySelector('#male').value;
+    // var female = document.querySelector('#female').value;
 
-<!--<script src="table_update.js"></script>-->
+
+    if(first_name !== "" && last_name !== "" && instagram !== "" && email !== "" && phone !== "" ){
+      document.querySelector('#floatingTextarea').textContent = "First name: " + first_name+ "\nLast name: " + last_name + "\nInstagram: @" + instagram + "\nEmail: " + email + "@" + emailTail + "\nPhone: " + phone + "\nCountry: " + country;
+      if(gender == "male")
+        document.querySelector('#floatingTextarea').textContent += "\nGender: Male";
+      else if(gender == "female")
+        document.querySelector('#floatingTextarea').textContent += "\nGender: Female";
+    }
+    document.querySelector('#floatingTextarea').textContent += "\nGender: Female";
+  }
+</script>
+
 </body>
 </html>
