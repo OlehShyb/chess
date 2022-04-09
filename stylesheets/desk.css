@@ -1,52 +1,37 @@
+.box{
+    background-color: beige;
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    display: inline-block;
+    font-size: 70px;
+    text-align: center;
+    margin: -10px -2px -2px;
+}
+.black{
+    background-color: saddlebrown;
+}
 .number {
+    font-size: 25px;
     position: relative;
     height: 0;
     width: 0;
     padding-left: 2px;
 }
-
 .letter {
-    position: absolute;
-    padding-bottom: 100%;
-    padding-right: 100%;
-}
-
-.white {
+    font-size: 25px;
     position: relative;
-    height: 100%;
-    width: 100%;
-    background-color: bisque;
+    bottom: -45px;
+    left: 30px;
+}
+a {
+    color: black;
+    text-decoration: none;
 }
 
-.black {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-color: saddlebrown;
-    color: white;
+#one, #three, #five, #seven, #b, #d, #f, #h{
+    color: saddlebrown;
 }
-
-TABLE {
-    border-collapse: collapse;
-    position: relative;
-}
-
-TD, TH {
-    position: relative;
-    padding: 0;
-    border-bottom: 0;
-    border-top: 0;
-    width: 100px;
-    height: 100px;
-}
-
-.image {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-
-img {
-    max-width: 100%;
-    max-height: 100%;
+#two, #four, #six, #eight, #a, #c, #e, #g{
+    color: beige;
 }
