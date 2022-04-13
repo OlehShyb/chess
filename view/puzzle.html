@@ -3,69 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Puzzle</title>
-    <link rel="shortcut icon" href="images/chess.ico">
-    <link rel="stylesheet" href="stylesheets/desk.css">
+    <link rel="shortcut icon" href="../images/chess.ico">
+    <link rel="stylesheet" href="../stylesheets/desk.css">
+    <link rel="stylesheet" href="../stylesheets/bar_chart.css">
+    <script src="../scripts/stopwatch.js"></script>
 </head>
 
 <style >
-    /*div[id="[1]"] {*/
-    /*    text-decoration: red;*/
-    /*    color: red;*/
-    /*}*/
+    body{
+        background: linear-gradient(to right, mediumpurple, plum, pink);
+    }
+
 </style>
 
 <body style="background-color: lightsteelblue">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; margin-bottom: 100px; width: 1440px; height: 75px; z-index: 2">
+<!--Header-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; width: 1440px; z-index: 2">
     <div class="container-fluid">
-<!--        <img src="chess.ico" alt="Girl in a jacket" width="50" height="50">-->
-        <a class="navbar-brand" href="chess.html" style="font-size: xx-large; margin-top: -5px; font-family: Impact">Chess</a>
+        <img src="../images/chess.ico" alt="Chess" width="50" height="50">
+        <a class="navbar-brand" href="chess.html" style="font-size: xx-large; color: darkorange; font-family: Impact">Chess</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"bggfhfdd>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="puzzle.html" style="font-size: x-large; margin-top: -5px; font-family: Georgia">Puzzle</a>
+                    <a class="nav-link" aria-current="page" href="puzzle.html" style="font-size: x-large; color: darkorange;font-family: Georgia">Puzzle</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="https://www.chess.com/uk/pravila-shakhi" style="font-size: x-large; margin-top: -5px; font-family: Georgia">Rules</a>
+                    <a class="nav-link" href="https://www.chess.com/uk/pravila-shakhi" style="font-size: x-large; color: darkorange;font-family: Georgia">Rules</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-size: x-large; margin-top: -5px; font-family: Georgia">About me</a>
+                    <a class="nav-link" aria-current="page" href="data.html" style="font-size: x-large; color: darkorange;font-family: Georgia">New Gamer</a>
                 </li>
-                <li>
-<!--                    <span class="form-control" id="time" style="color: darkorange; font-family: 'Comic Sans MS'; font-size: xx-large; text-align: right"/>-->
-                </li>
-
             </ul>
             <div>
-                <span class="form-control" id="time" style="color: orangered;background-color: powderblue; font-family: 'Comic Sans MS'; font-size: x-large"><script src="scripts/time.js"></script></span>
+                <span class="form-control" id="time" style="color: indigo;background-color: powderblue; font-family: 'Comic Sans MS'; font-size: x-large"><script src="../scripts/time.js"></script></span>
             </div>
         </div>
     </div>
 </nav>
 
-
 <br>
 <br>
 <br>
 <br>
 
-<table bgcolor="#D0AC39" border="0" cellspacing="0" cellpadding="0">
+<!--Chess desk-->
+<table bgcolor="#D0AC39" border="0" cellspacing="0" cellpadding="0" style="margin-left: 3%; margin-top: -2%">
     <span>
-        <caption align="bottom" style="font-size: 40px; margin-top: -20px">
+        <caption align="top" style="font-size: 30px; text-align: center; font-family: 'Comic Sans MS'">
+            <b style="color: black">
             Press
             <b style="font-size: 60px">&#9812;</b>
             or
             <b style="font-size: 65px">&#9818;</b>
-            to go to the chess.com page with this puzzle.
+            to go to this puzzle.
+            </b>
         </caption>
     </span>
     <tbody>
         <tr height="15">
-            <td background="images/frame_NW.png" width="10"></td>
-            <td background="images/frame_N.png">          </td>
-            <td background="images/frame_NE.png" width="10"></td>
+            <td background="../images/frame_NW.png" width="10"></td>
+            <td background="../images/frame_N.png">          </td>
+            <td background="../images/frame_NE.png" width="10"></td>
         </tr><tr>
-        <td background="images/frame_W.png">
+        <td background="../images/frame_W.png">
         </td><td bgcolor="#EEDD99" align="center" valign="middle">
                 <table class="frame" style="margin-top: 0px; background-color: black" >
                     <tr>
@@ -78,7 +82,7 @@
                             <div class="box black"></div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black" style="margin-bottom: 4px">
@@ -86,7 +90,7 @@
                             </div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black"></div>
@@ -108,13 +112,13 @@
                             </div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black"></div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black" style="margin-bottom: 4px">
@@ -122,7 +126,7 @@
                             </div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black"></div>
@@ -144,7 +148,7 @@
                             <div class="box black"></div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black" style="margin-bottom: 4px">
@@ -165,7 +169,7 @@
                             </div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black"></div>
@@ -179,13 +183,13 @@
                             </div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black"></div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black" style="margin-bottom: 4px">
@@ -194,13 +198,13 @@
                             </div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black"></div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                     </tr>
                     <tr>
@@ -213,7 +217,7 @@
                             <div class="box black"></div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black"></div>
@@ -227,7 +231,7 @@
                             <div class="box black"></div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black"></div>
@@ -242,25 +246,25 @@
                             </div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black"></div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black"></div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black"></div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                     </tr>
                     <tr>
@@ -276,7 +280,7 @@
                             </div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black" style="margin-bottom: 4px">
@@ -285,7 +289,7 @@
                             </div>
                         </td>
                         <td>
-                            <div class="box" style="color: beige"></div>
+                            <div class="box"></div>
                         </td>
                         <td>
                             <div class="box black" style="margin-bottom: 4px">
@@ -348,22 +352,51 @@
                     </tr>
                 </table>                        <!--     Mat (12px) -->
         </td>
-        <td background="images/frame_E.png">                                                               <!--     E Edge -->
+        <td background="../images/frame_E.png">                                                               <!--     E Edge -->
         </td></tr><tr height="10">                                                                                     <!-- Bottom of Frame (height 10px) -->
-        <td background="images/frame_SW.png">                                                              <!--     SW Corner -->
-        </td><td background="images/frame_S.png"></td>                                                              <!--     S Edge -->
-        <td background="images/frame_SE.png"></td>                                                             <!--     SE Corner -->
+        <td background="../images/frame_SW.png">                                                              <!--     SW Corner -->
+        </td><td background="../images/frame_S.png"></td>                                                              <!--     S Edge -->
+        <td background="../images/frame_SE.png"></td>                                                             <!--     SE Corner -->
     </tr>
     </tbody>
 </table>
 
-<div>
-    <canvas id="myChart"></canvas>
+
+<!--Stopwatch-->
+<div class="container" style="position: absolute; margin-left: 50%; margin-top: -40%">
+    <h1 style="font-family: Impact">Stop Watch</h1>
+    <p id="stopwatch" style="font-family: 'Comic Sans MS'; font-size: 35px"><span id="second">00</span>:<span id="tens">00</span></p>
+    <button class="btn btn-success" id="btn-start">Start</button>
+    <button class="btn btn-danger" id="btn-stop">Stop</button>
+    <button class="btn btn-warning" id="btn-reset">Reset</button>
+</div>
+
+<!--Chart bar-->
+<h1 style="font-family: Impact; margin-top: 2%; margin-left: 5%">Chart bar</h1>
+<div style="margin-left: 3%; margin-top: 2%">
+    <div style="height:330px; width:850px; background: linear-gradient(to right, lightskyblue, cornflowerblue, mediumpurple)">
+        <canvas id="myChart" style="height:50vh; width:80vw"></canvas>
+    </div>
+    <div id="chart_figures" style=";border: 2px goldenrod;">
+        <b>&#9812;</b>
+        <b>&#9813;</b>
+        <b>&#9814;</b>
+        <b>&#9815;</b>
+        <b>&#9816;</b>
+        <b>&#9817;</b>
+        <b>&#9818;</b>
+        <b>&#9819;</b>
+        <b>&#9820;</b>
+        <b>&#9821;</b>
+        <b>&#9822;</b>
+        <b>&#9823;</b>
+        <b style="font-size: 23px; margin-top: -20px; margin-left: 2px; font-family: 'Arial Black'">ALL</b>
+    </div>
 </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-<script src="scripts/chart.js"></script>
+<script src="../scripts/chart.js"></script>
 
 </body>
 </html>

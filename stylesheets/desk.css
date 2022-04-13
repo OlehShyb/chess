@@ -9,7 +9,7 @@
     margin: -10px -2px -2px;
 }
 .black{
-    background-color: saddlebrown;
+    background-color: orchid;
 }
 .number {
     font-size: 25px;
@@ -30,7 +30,7 @@ a {
 }
 
 #one, #three, #five, #seven, #b, #d, #f, #h{
-    color: saddlebrown;
+    color: orchid;
 }
 #two, #four, #six, #eight, #a, #c, #e, #g{
     color: beige;

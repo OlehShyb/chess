@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gamer Data</title>
+
+    <link rel="shortcut icon" href="../images/chess.ico">
+    <link rel="stylesheet" href="data/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="data/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="data/css/style.css">
+
+    <style>
+        body{
+            background-image: url("data/images/signup-bg.jpg");
+            background: linear-gradient(to right, mediumpurple, plum, pink);
+        }
+        </style>
+</head>
+<body>
+
+    <div class="main">
+        <section class="signup">
+            <div class="container" style="background-image: linear-gradient(to right bottom, #d6efff, #bee4fe, #a7d9fd, #8fcefc, #76c2fb);">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+                        <h1 style="margin-top: -30px; margin-left: 38%; color: indigo; font-size: x-large;font-family: 'Comic Sans MS'">Gamer Data</h1>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first_name" style="color: indigo">First name</label>
+                                <input type="text" class="form-input" name="first_name" id="first_name" required placeholder="For example: Alex" minlength="2" maxlength="20" pattern="[a-zA-Z]+" onfocusout="validateFirstName()" />
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name" style="color: indigo">Last name</label>
+                                <input type="text" class="form-input" name="last_name" id="last_name" required placeholder="For example: Smith" minlength="2" maxlength="20" pattern="[a-zA-Z]+" onfocusout="validateLastName()" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group form-icon">
+                                <label for="birth_date" style="color: indigo">Birth date</label>
+                                <input type="text" class="form-input" name="birth_date" id="birth_date" placeholder="🗓 MM-DD-YYYY" required/>
+                            </div>
+                            <div class="form-radio">
+                                <label for="male" style="color: indigo">Gender</label>
+                                <div class="form-flex">
+                                    <input type="radio" name="gender" value="male" id="male" checked="checked" required/>
+                                    <label for="male">Male♂</label>
+    
+                                    <input type="radio" name="gender" value="female" id="female" />
+                                    <label for="female">Female♀</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone_number" style="color: indigo">Phone number</label>
+                            <input type="text" class="form-input" name="phone_number" id="phone_number" required placeholder="☎️ +38 999 999 9999" onfocusout="validatePhone()"/>
+                        </div>
+
+
+
+<!--                        <div class="form-row">-->
+<!--                            <div class="form-group">-->
+<!--                                <label for="password">Password</label>-->
+<!--                                <input type="password" class="form-input" name="password" id="password"/>-->
+<!--                            </div>-->
+<!--                            <div class="form-group">-->
+<!--                                <label for="re_password">Repeat your password</label>-->
+<!--                                <input type="password" class="form-input" name="re_password" id="re_password"/>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+                        <div class="form-text">
+                            <a href="#" class="add-info-link" style="color: indigo"><i class="zmdi zmdi-chevron-right"></i>Additional info</a>
+                            <div class="add_info">
+                                <div class="form-group">
+                                    <label for="email" style="color: indigo">Email</label>
+                                    <input type="email" class="form-input" name="email" id="email" placeholder="📧 example@gmail.com"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="instagram" class="form-label" style="color: indigo">Instagram</label>
+                                    <div class="input-group has-validation">
+                                        <input type="text" class="form-control" style="margin-bottom: 20px" id="instagram" name="instagram" aria-describedby="inputGroupPrepend" minlength="2" maxlength="20" pattern="[a-zA-Z]+" placeholder="🌐 Nick name">
+                                    </div>
+                                </div>
+<!--                                <div class="form-group">-->
+<!--                                    <label for="country" style="color: indigo">Country</label>-->
+<!--                                    <div class="select-list">-->
+<!--                                        <select name="country" id="country">-->
+<!--                                            <option selected disabled value="">Choose...</option>-->
+<!--                                            <option value="US">United State</option>-->
+<!--                                            <option value="UK">English</option>-->
+<!--                                            <option>Germany</option>-->
+<!--                                            <option>United Kingdom</option>-->
+<!--                                            <option>France</option>-->
+<!--                                            <option>Italy</option>-->
+<!--                                            <option>Spain</option>-->
+<!--                                            <option>Ukraine</option>-->
+<!--                                            <option>Poland</option>-->
+<!--                                            <option>Romania</option>-->
+<!--                                            <option>Netherlands</option>-->
+<!--                                            <option>Belgium</option>-->
+<!--                                            <option>Czech Republic</option>-->
+<!--                                            <option>Greece</option>-->
+<!--                                            <option>Portugal</option>-->
+<!--                                            <option>Sweden</option>-->
+<!--                                            <option>Hungary</option>-->
+<!--                                            <option>Belarus</option>-->
+<!--                                            <option>Austria</option>-->
+<!--                                            <option>Serbia</option>-->
+<!--                                            <option>Switzerland</option>-->
+<!--                                            <option>Bulgaria</option>-->
+<!--                                            <option>Denmark</option>-->
+<!--                                            <option>Finland</option>-->
+<!--                                            <option>Slovakia</option>-->
+<!--                                            <option>Norway</option>-->
+<!--                                            <option>Ireland</option>-->
+<!--                                            <option>Croatia</option>-->
+<!--                                            <option>Moldova</option>-->
+<!--                                            <option>Albania</option>-->
+<!--                                            <option>Lithuania</option>-->
+<!--                                            <option>Latvia</option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                        <div class="form-floating" style="margin-bottom: -50px">
+                            <textarea class="form-control" placeholder="Click on <Preview info 🔍> to form all gamer data" id="floatingTextarea" style="height: 200px; width: 100%; font-size: medium" readonly></textarea>
+                        </div>
+                        <div class="form-group">
+                            <a href="chess.html"><input type="button" name="back" id="back" class="form-submit" value="Back" style="color: indigo; background-color: palegoldenrod; position: absolute; margin-top: 60px; height: 55px"></a>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Submit ✅" style="color: indigo; background-color: lightgreen"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" name="preview" id="preview" class="form-submit" value="Preview info 🔍" style="color: indigo; background-color: pink" onclick="previewData()"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script>
+        function validateFirstName(){
+
+            var first_name = document.getElementById('first_name').value;
+            if(first_name[0].toUpperCase() !== first_name[0])
+            {
+                document.getElementById('first_name').value = first_name.charAt(0).toUpperCase() + first_name.slice(1);
+                // window.alert('First character is upper case.');
+            }
+        }
+        function validateLastName(){
+
+            var last_name = document.getElementById('last_name').value;
+            if(last_name[0].toUpperCase() !== last_name[0])
+            {
+                document.getElementById('last_name').value = last_name.charAt(0).toUpperCase() + last_name.slice(1);
+                // window.alert('First character is upper case.');
+            }
+        }
+        function previewData(){
+            var instagram = "-----";
+            var email = "------";
+            var first_name = document.querySelector('#first_name').value;
+            var last_name = document.querySelector('#last_name').value;
+            var birth_date = document.querySelector('#birth_date').value;
+            var phone_number = document.querySelector('#phone_number').value;
+            if(document.querySelector('#instagram').value !== "")
+                instagram = document.querySelector('#instagram').value;
+            if(document.querySelector('#email').value !== "")
+                email = document.querySelector('#email').value;
+            var gender = document.getElementsByName('gender');
+
+            if(first_name !== "" && last_name !== "" && birth_date !== "" && phone_number !== "" ){
+                document.querySelector('#floatingTextarea').textContent = "First name: " + first_name+ "\nLast name: " + last_name + "\nBirth date: " + birth_date + "\nPhone number: " + phone_number + "\nInstagram: @" + instagram + "\nEmail: " + email;
+                for(i = 0; i < gender.length; i++) {
+                    if(gender[i].checked)
+                        document.querySelector('#floatingTextarea').textContent += "\nGender: " + gender[i].value;
+                }
+            }
+        }
+    </script>
+    <script src="data/vendor/jquery/jquery.min.js"></script>
+    <script src="data/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="data/vendor/jquery-validation/validation.js"></script>
+<!--    <script src=""></script>-->
+<!--    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>-->
+<!--    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>-->
+    <script src="data/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
