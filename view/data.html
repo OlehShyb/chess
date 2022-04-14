@@ -75,7 +75,7 @@
                             <div class="add_info">
                                 <div class="form-group">
                                     <label for="email" style="color: indigo">Email</label>
-                                    <input type="email" class="form-input" name="email" id="email" placeholder="📧 example@gmail.com"/>
+                                    <input type="email" class="form-input" name="email" id="email" placeholder="📧 example@gmail.com" onfocusout="validateEmail()"/>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="instagram" class="form-label" style="color: indigo">Instagram</label>
@@ -126,8 +126,9 @@
                             </div>
                         </div>
                         <div class="form-floating" style="margin-bottom: -50px">
-                            <textarea class="form-control" placeholder="Click on <Preview info 🔍> to form all gamer data" id="floatingTextarea" style="height: 200px; width: 100%; font-size: medium" readonly></textarea>
+                            <textarea class="form-control" placeholder="Click on <PREVIEW INFO 🔍> to form all gamer data" id="floatingTextarea" style="height: 200px; width: 100%; font-size: medium" readonly></textarea>
                         </div>
+                        <input type="hidden" id="custId" name="custId" value="My contacts: Oleh Shebunchak (+380957160342)">
                         <div class="form-group">
                             <a href="chess.html"><input type="button" name="back" id="back" class="form-submit" value="Back" style="color: indigo; background-color: palegoldenrod; position: absolute; margin-top: 60px; height: 55px"></a>
                         </div>
@@ -164,6 +165,17 @@
                 // window.alert('First character is upper case.');
             }
         }
+        function validateEmail()
+        {
+            var email =  document.getElementById('email').value;
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+            {
+                return (true)
+            }
+            alert("You have entered an invalid email address!")
+            return (false)
+        }
+
         function previewData(){
             var instagram = "-----";
             var email = "------";
