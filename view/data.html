@@ -142,7 +142,6 @@
                 </div>
             </div>
         </section>
-
     </div>
 
     <!-- JS -->
@@ -167,13 +166,15 @@
         }
         function validateEmail()
         {
-            var email =  document.getElementById('email').value;
-            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
-            {
-                return (true)
-            }
-            alert("You have entered an invalid email address!")
-            return (false)
+            var email = document.getElementById('email').value;
+            var emailRGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var emailResult = emailRGEX.test(email);
+            if(document.getElementById('email').value !== "")
+                if(emailResult === false)
+                {
+                    document.getElementById('email').value = "";
+                    alert("\t\t\t\t    Wrong!!!⛔⛔⛔⛔⛔\n\t\t\t  Enter your email \n\t\t   in the correct format: example@gmail.com or others");
+                }
         }
 
         function previewData(){
